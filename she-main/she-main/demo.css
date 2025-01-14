@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #00000088, #00000000, #070707ad, #000000);
+    /* background-color: black; */
+  background-size: 300% 300%;
+  animation: gradientMotion 15s ease infinite;
+  color: rgba(0, 0, 0, 0);
+
+  
+  }
+
+  
+  @keyframes gradientMotion {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  button {
+    position: absolute;
+    z-index: 10;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image-container img {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    opacity: 0;
+    
+    transform: translate(0, 0);
+    transition: opacity 3s ease-out, transform 5s ease; /* Longer duration for smooth effect */
+  }
+  #musicButton{
+    top: 80px; /* Position the music button below the start animation button */
+    left: 50px;
+  }
