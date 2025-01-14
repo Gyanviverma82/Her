@@ -1,0 +1,104 @@
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+
+}
+
+body{
+     width: 100vw;
+     height: 100vh;
+     background-image: url("./images/bgc3.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+}
+.mainimg {
+     margin-top: 20px;
+     height: 600px;
+     position: relative;
+     width: 400px;
+     background-size: cover;
+     border-radius: 10px;
+     border: 10px rgb(133, 214, 40) ;
+     border: 5px solid #007bff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(128, 15, 2, 0.5);
+  animation: pulseBorder 3s infinite ease-in-out;
+
+  
+  position: relative;
+  
+  transition: border-color 1s ease, box-shadow 1s ease, transform 0.5s ease;
+}
+
+
+@keyframes pulseBorder {
+     0%, 100% {
+       border-color: #51b902;
+       box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+     }
+     50% {
+       border-color: #e618af;
+       box-shadow: 0 8px 30px rgba(255, 87, 51, 0.7);
+     }
+   }
+.container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     position: relative;
+}
+.container h1{
+     position: absolute;
+     margin-left: 1000px;
+     margin-bottom: 300px;
+color: #ffff;
+     font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      overflow: hidden;
+      white-space: nowrap;
+      /* border-right: 2px solid white; */
+      width: 0;
+      animation: typing 5s steps(20) infinite, blink 1s step-end infinite;
+}
+
+.d-grid{
+     display: flex;
+     flex-direction: row;
+}
+.btn {
+     margin-top: 40px;
+    
+
+
+
+}
+@keyframes typing {
+     0% {
+       width: 0;
+     }
+     50% {
+       width: 25ch; /* Adjust to match the length of your text */
+     }
+     100% {
+       width: 0;
+     }
+   }
+
+   @keyframes blink {
+     from, to {
+       border-color: transparent;
+     }
+     50% {
+       border-color: white;
+     }
+   }
+
+   #musicButton{
+     top: 80px; /* Position the music button below the start animation button */
+     left: 50px;
+   }
